@@ -1,0 +1,31 @@
+1. Sign-Up / Create Account Page 
+2. Login Page
+
+Separete Components for Futsal Owners & Customers. 
+a.Normal form 
+b.Sign-up & Login with Facebook + G-mail using their APIs.
+
+3.Home Page Components: 
+a.Search Bar to Enter Your Location
+b.Filter Options according to Price or Nearest from user-location.
+c.List of Futsals with (Image + short Description + Price Tag)
+d.User's History of Booked Futsals
+e.Current Rewards -(Book and Review to get Rewards)
+
+
+4.Page for each Futsal Components:
+a.Images + Description + Address + Price Tag + Facilities 
+b. Booking Date and Time Selector Component (Pre-booking prior to 1 month)
+c. Google Maps API Integration
+d. Booking Options: Reservation / Payment
+e. Review + Ratings with Rewards on Review
+
+5.Booking Page Components:
+a.view, edit, and cancel bookings form
+b.Payment gateway using e-sewa & khalti API
+
+6. Notification Component:
+a.Users receive alerts about their bookings, payments, and other activities on the platform.
+
+
+
