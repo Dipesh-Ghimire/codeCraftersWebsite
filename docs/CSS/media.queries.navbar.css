@@ -1,0 +1,127 @@
+@media screen and (max-width:1424px) {
+   h3{
+      font-size: 1.2rem;
+   }
+   .navbar-links{
+      display: none;
+   }
+   #toggle-button{
+      display:flex;
+   }
+   .navbar-container{
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 10px;
+   }
+   .navbar-links>div>a{
+      padding-block:0;
+   }
+   /* active class is defined here */
+   .active{
+      display:flex;
+      flex-direction: column;
+   }
+   /* .search-button{
+      width: 50px;
+      height: 50px;
+   } */
+   .search-input{
+      font-size: 10px;
+      width: 50px;
+      /* width:auto; */
+   }
+}
+
+@media screen and (max-width:900px) {
+   .search-button{
+      width: 50px;
+      height: 50px;
+   }
+   .location-button{
+      /* height: auto; */
+   }
+   .navbar{
+      padding:20px 0;
+   }
+}
+@media screen and (max-width:768px) {
+   .search-bar-container{
+      margin-inline:2px;
+      min-width: 272px;
+   }
+   .search-input::placeholder{
+      font-size: 20px;
+   }
+   
+}
+@media screen and (max-width:480px) {
+   .search-bar{
+      display:inline;
+      padding-block:8px;
+   }
+   .search-input{
+      width:125px;
+   }
+   .location-button{
+      width:30px; 
+   }
+   .search-bar-container{
+      margin-inline:-10px;
+   }
+}
+@media screen and (max-width:525px) {
+   :root{
+      --padding-inline-section:10px
+   }
+   h1{
+      font-size: 2rem;
+   }
+   
+   h2{
+      font-size: 1.5rem;
+   }
+   p{
+      font-size: 1rem;
+   }
+/* Top Banner */
+   .top-banner {
+      background-size: 20em;
+    }
+    .banner-text {
+      padding:5px 0;
+      text-align: center;
+    }
+    .banner-text a {
+      font-size: small;
+      font-weight:100;
+    }
+    #logo a img {
+      width: 60px;
+  }
+    .logo-outer{
+      justify-content: flex-start;
+    }
+    .search-input{
+      font-size: 10px;
+      width:160px;
+      /* padding-bottom: 6px; */
+   }
+    .search-input::placeholder{
+      font-size: 20px;
+   }
+   .search-bar{
+      min-width:260px;
+      min-width:100px !important;
+      /* margin-inline:40px; */
+   }
+   .search-bar input {
+      font-size: 20px;
+  }
+   .search-button {
+      width: 35px;
+      height: 35px;
+  }
+  #toggle-button{
+   padding-block:18px;
+  }
+}
