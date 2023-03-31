@@ -1,12 +1,5 @@
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
- /* styling tags */
+/* styling tags */
  :root {
-   /* defining css variables */
-   --primary-text-color: #ffffff;
    --primary-font-weight: 700;
    /* --dark-color-diff:#232323; */
    --dark-color-diff:#454545;
@@ -17,16 +10,9 @@
    --padding-inline-section: 20px;
    --padding:1rem;
  }
-body{
-   background-color: black;
-   padding:20px;
-}
 .cs-heading{
    text-align: center;
    margin-block: 50px 20px;
-}
-.bsb-section{
-   border:3px solid  white;
 }
 .cs-heading h2{
    margin-bottom: 20px;
@@ -86,7 +72,7 @@ body{
    padding:var(--padding);
    padding-top: 0;
 }
-.btn{
+.card-btn{
    --color:var(--accent-color);
    background-color:var(--color);
    border:none;
@@ -98,21 +84,21 @@ body{
    font-weight: 700;
    margin-top: .25rem;
 }
-.btn:hover,.btn:focus{
+.card-btn:hover,.card-btn:focus{
    /* background:hsl(200,50%,60%); */
    background-color: var(--accent-color-dark);
 }
-.btn.btn-outline{
+.card-btn.card-btn-outline{
    background:none;
    border:3px solid var(--color);
    color:var(--color);
    color:white;
 }
-.btn.btn-outline:hover,.btn.btn-outline:focus{
+.card-btn.card-btn-outline:hover,.card-btn.card-btn-outline:focus{
    /* background: hsl(200,50%,90%); */
    color:#22ed4e;
 }
-.btn + .btn{
+.card-btn + .card-btn{
    margin-left: .25rem;
 }
 .c-white{

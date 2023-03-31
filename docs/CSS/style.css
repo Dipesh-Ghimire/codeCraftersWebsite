@@ -24,7 +24,7 @@
   --padding-inline-section: 20px;
 }
 body{
-  /* background-color: var(--bg-color); */
+  background-color: var(--bg-color);
   font-family: "Poppins", sans-serif;
   color: var(--primary-text-color);
 }
@@ -269,9 +269,9 @@ ul {
 
 .bsb-right {
   /* flex-direction: column; */
-  border: 2px solid white;
-  border-radius: 50px;
-  padding: 30px;
+  /* border: 2px solid white; */
+  /* border-radius: 50px; */
+  /* padding: 30pxs; */
 }
 .bsb-search-button {
   font-weight: 1000;
