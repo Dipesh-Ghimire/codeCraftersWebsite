@@ -297,6 +297,8 @@ ul {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;
+  /* for bouncing animation */
+  animation: bounce 1s infinite;
 }
 .to-top.active {
   bottom: 32px;
@@ -305,6 +307,15 @@ ul {
 }
 html {
   scroll-behavior: smooth;
+}
+/* for bouncing */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 @media screen and (max-width: 1000px) {
   .to-top {
@@ -315,6 +326,10 @@ html {
     opacity: 0.8;
   }
 }
+
+
+
+
 
 /* footer */
 footer {
