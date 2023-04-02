@@ -1,5 +1,5 @@
 /* This is the Cascading Style Sheet (CSS) file. */
-.temporary{
+.temporary {
   height: 800px;
 }
 /* Importing Google Fonts by selecting some specific fonts */
@@ -16,14 +16,14 @@
   --primary-text-color: #ffffff;
   --primary-font-weight: 700;
   /* --dark-color-diff:#232323; */
-  --dark-color-diff:#454545;
-  --navbar-color:#1d1d1f;
-  --bg-color:#181818;
+  --dark-color-diff: #454545;
+  --navbar-color: #1d1d1f;
+  --bg-color: #181818;
   --accent-color: #22ed4e;
   --accent-color-dark: #24a31d;
   --padding-inline-section: 20px;
 }
-body{
+body {
   background-color: var(--bg-color);
   font-family: "Poppins", sans-serif;
   color: var(--primary-text-color);
@@ -63,10 +63,10 @@ ul {
   padding-inline: var(--padding-inline-section);
   overflow: hidden;
 }
-.flex{
+.flex {
   display: flex;
 }
-.flex-center{
+.flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +90,7 @@ ul {
 .primary-button:hover {
   background-color: var(--accent-color-dark);
   box-shadow: 0 0 10px var(--secondary-text-color);
-  border:2px solid var(--accent-color-dark);
+  border: 2px solid var(--accent-color-dark);
 }
 .secondary-button {
   border: 2px solid var(--accent-color-dark);
@@ -106,38 +106,27 @@ ul {
   box-shadow: 0 0 10px var(--secondary-text-color);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* 1.top-banner section*/
 .top-banner {
-   background-image: url("../Futsal_images/topbar.png");
-   /* background-color: #00a8ff; */
-   background-color: #00a8ff;
-   background-size: 20em;
-   width:100vw;
- }
- .banner-text {
-   padding: .5em 1.5em;
-   text-align: center;
- }
- .banner-text a {
+  background-image: url("../Futsal_images/topbar.png");
+  /* background-color: #00a8ff; */
+  background-color: #00a8ff;
+  background-size: 20em;
+  width: 100vw;
+}
+.banner-text {
+  padding: 0.5em 1.5em;
+  text-align: center;
+}
+.banner-text a {
   color: var(--primary-text-color);
-   font-weight: var(--primary-font-weight);
- }
+  font-weight: var(--primary-font-weight);
+}
 /* Navbar */
-#logo a img{
-  width:100px;
+#logo a img {
+  width: 100px;
   /* background-color: cyan; */
-  transform:rotate(9deg);
+  transform: rotate(9deg);
 }
 .navbar {
   /* background-color: #3baf52; */
@@ -150,9 +139,9 @@ ul {
   backdrop-filter: blur(10px);
   /* background-color: var(--navbar-color); */
   opacity: 98%;
-  padding:20px;
+  padding: 20px;
 }
-.background{
+.background {
   background: rgba(0, 0, 0, 0.7) url("../Futsal_images/futsalpic.jpg");
   background-size: cover;
   background-position: top;
@@ -182,11 +171,11 @@ ul {
   outline: none;
   font-size: 30px;
 }
-.search-bar-container{
- width:40vw;
- min-width: 335px;
- /* border:2px solid red; */
- margin-inline:30px;
+.search-bar-container {
+  width: 40vw;
+  min-width: 335px;
+  /* border:2px solid red; */
+  margin-inline: 30px;
 }
 .search-button {
   border: 0;
@@ -213,7 +202,7 @@ ul {
   /* width: 6em; */
   height: 3rem;
   background: transparent;
-  color:var(--accent-color);
+  color: var(--accent-color);
 }
 .navbar-links {
   display: flex;
@@ -223,8 +212,8 @@ ul {
   font-weight: 700;
   font-size: larger;
 }
-#toggle-button{
-  padding-block:35px;
+#toggle-button {
+  padding-block: 35px;
   display: none;
   position: absolute;
   right: 1rem;
@@ -235,7 +224,7 @@ ul {
   font-weight: 700;
   color: white;
   background-image: url(../Futsal_images/futsalpic2.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: top;
   /* height: 70vh; */
   background-size: auto 100vh;
@@ -243,7 +232,7 @@ ul {
   background-repeat: no-repeat;
   /* background-blend-mode: darken; */
 }
-@media screen and (min-width:700px){
+@media screen and (min-width: 700px) {
   .bsb-section {
     background-size: 100vw 100vh;
   }
@@ -253,7 +242,7 @@ ul {
   height: 1000px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size:80%;
+  background-size: 80%;
   justify-content: space-between;
   flex-direction: row;
 }
@@ -283,90 +272,107 @@ ul {
 .bsb-right form {
   flex-direction: column;
 }
-.bsb-search-bar{
-  height:60px;
+.bsb-search-bar {
+  height: 60px;
 }
-.search-input{
-  color:var(--accent-color);
+.search-input {
+  color: var(--accent-color);
 }
-.i-location{
-  padding-inline:20px;
+.i-location {
+  padding-inline: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Go to-top section */
+.to-top {
+  background: var(--accent-color-dark);
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media screen and (max-width: 1000px) {
+  .to-top {
+    right: 20px;
+    bottom: 0px;
+  }
+  .to-top.active {
+    opacity: 0.8;
+  }
+}
 
 /* footer */
-footer{
+footer {
+  margin-top: 50px;
   width: 100%;
-  background:linear-gradient(to right, #00093c,#2d0b00);
-  position:relative;
-  bottom:0;
-  padding:100px 0 30px;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  /* position:relative; */
+  /* bottom:0; */
+  padding: 100px 0 30px;
   border-top-left-radius: 125px;
   font-size: 13px;
   line-height: 20px;
 }
-.logo-class{
-  width:80px;
+.logo-class {
+  width: 80px;
   /* padding:20px; */
-  transform:rotate(9.5deg);
+  transform: rotate(9.5deg);
   margin-bottom: 30px;
 }
-.row{
-  width:85%;
-  margin:auto;
+.row {
+  width: 85%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
-.col p{
+.col p {
   font-size: 1rem;
 }
-.col{
-  flex-basis:25%;
-  padding:10px;
+.col {
+  flex-basis: 25%;
+  padding: 10px;
 }
-.col:nth-child(2),.col:nth-child(3){
+.col:nth-child(2),
+.col:nth-child(3) {
   flex-basis: 15%;
 }
-.col h3{
+.col h3 {
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 40px;
-  position:relative;
+  position: relative;
 }
-.email-id{
+.email-id {
   width: -moz-fit-content;
-  width:fit-content;
+  width: fit-content;
   border-bottom: 1px solid #ccc;
-  margin:20px 0;
+  margin: 20px 0;
 }
-.col ul li{
+.col ul li {
   margin-bottom: 12px;
 }
-.col ul li a{
-  color:white;
+.col ul li a {
+  color: white;
   font-size: 1.2rem;
 }
-form{
+form {
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -374,95 +380,95 @@ form{
   border-bottom: 1px solid #ccc;
   margin-bottom: 50px;
 }
-.newsletter{
-  width:100%;
+.newsletter {
+  width: 100%;
   background: transparent;
-  color:var(--accent-color);
-  border:0;
-  outline:none;
+  color: var(--accent-color);
+  border: 0;
+  outline: none;
 }
-.envelope{
+.envelope {
   background: transparent;
   font-size: 18px;
   margin-right: 10px;
 }
-.right-click{
+.right-click {
   background: transparent;
-  color:white;
+  color: white;
   cursor: pointer;
-  border:0;
-  outline:none;
+  border: 0;
+  outline: none;
 }
-.social-sites{
-  padding-bottom:40px;
+.social-sites {
+  padding-bottom: 40px;
 }
-.social-sites >.fab{
+.social-sites > .fab {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
   font-size: 20px;
-  color:#000;
+  color: #000;
   background: #fff;
   margin-right: 15px;
   cursor: pointer;
-  padding:0;
-  margin-block:0 20px;
+  padding: 0;
+  margin-block: 0 20px;
 }
-.social-sites>.fab:hover{
+.social-sites > .fab:hover {
   background-color: var(--accent-color-dark);
 }
-footer hr{
+footer hr {
   width: 90%;
-  border:0;
+  border: 0;
   border-bottom: 1px solid #ccc;
-  margin:10px auto;
+  margin: 10px auto;
 }
-.copyright{
+.copyright {
   text-align: center;
 }
-.underline{
-  width:100%;
-  height:5px;
-  background:#767676;;
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
   border-radius: 3px;
-  position:absolute;
-  top:25px;
-  left:0;
+  position: absolute;
+  top: 25px;
+  left: 0;
   /* overflow during animation */
   overflow: hidden;
 }
-.underline span{
-  width:15px;
-  height:100%;
-  background:#fff;
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
   border-radius: 3px;
-  position:absolute;
-  top:0;
-  left:10px;
-  animation:moving 2s linear infinite;
-
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
 }
-@keyframes moving{
-  0%{
-    left:-20px;
+@keyframes moving {
+  0% {
+    left: -20px;
   }
-  100%{
-    left:100%;
+  100% {
+    left: 100%;
   }
 }
-@media (max-width:700px){
-  footer{
-     bottom: unset;
+@media (max-width: 700px) {
+  footer {
+    bottom: unset;
   }
-  .col{
-     flex-basis: 100%;
+  .col {
+    flex-basis: 100%;
   }
-  .col:nth-child(2),.col:nth-child(3){
-     flex-basis: 100%;
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    flex-basis: 100%;
   }
-  .maps{
-    width:300px;
+  .maps {
+    width: 300px;
   }
 }
