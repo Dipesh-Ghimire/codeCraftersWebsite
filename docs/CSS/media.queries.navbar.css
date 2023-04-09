@@ -50,15 +50,14 @@
       min-width: 272px;
    }
    .search-input::placeholder{
-      font-size: 20px;
+      font-size: 22px;
    }
+   .i-location {
+      padding-inline: 15px;
+    }
    
 }
 @media screen and (max-width:480px) {
-   .search-bar{
-      display:inline;
-      padding-block:8px;
-   }
    .search-input{
       width:125px;
    }
@@ -93,13 +92,16 @@
     }
     .banner-text a {
       font-size: small;
-      font-weight:100;
     }
     #logo a img {
       width: 60px;
+      margin-left: 5px;
   }
     .logo-outer{
       justify-content: flex-start;
+    }
+    .navbar{
+      padding-block: 5px;
     }
     .search-input{
       font-size: 10px;
@@ -112,7 +114,8 @@
    .search-bar{
       min-width:260px;
       min-width:100px !important;
-      /* margin-inline:40px; */
+      display:inline;
+      padding-block:8px;
    }
    .search-bar input {
       font-size: 20px;
@@ -121,6 +124,9 @@
       width: 35px;
       height: 35px;
   }
+  .i-location {
+   padding-inline: 12px;
+ }
   #toggle-button{
    padding-block:18px;
   }

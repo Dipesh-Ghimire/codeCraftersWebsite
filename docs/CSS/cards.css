@@ -10,6 +10,11 @@
   --padding-inline-section: 20px;
   --padding: 1rem;
 }
+@media screen and (min-width:1100px) {
+  .card-section{
+    padding-inline:4rem;
+  }
+}
 .cs-heading {
   text-align: center;
   margin-block: 50px 20px;
