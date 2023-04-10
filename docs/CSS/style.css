@@ -222,36 +222,51 @@ ul {
   right: 1rem;
   cursor: pointer;
 }
+/* googleMapsAPI */
+/* .pac-container {
+  background-color: #333;
+  color: #fff;
+}
+.pac-item {
+  background-color: #333;
+  color: #fff;
+}
+.pac-item:hover, .pac-item-query:hover {
+  background-color: #555;
+}
+.pac-item-selected, .pac-item-selected:hover {
+  background-color: #555;
+} */
+
+
 /* Big Search Bar- Section */
 .bsb-section {
   font-weight: 700;
-  color: white;
-  background-image: url(../Futsal_images/futsalpic2.jpg);
+/* background-image: url(../Futsal_images/futsalpic2.jpg); */
+  background-image: url(../Futsal_images/player2.jpg);
   background-size: cover;
   background-position: top;
-  /* height: 70vh; */
-  background-size: auto 100vh;
-  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* background-size: 100vw auto; */
   background-repeat: no-repeat;
-  /* background-blend-mode: darken; */
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .bsb-section {
-    background-size: 100vw 100vh;
+    /* background-size: auto 75vh; */
+  }
+  .big-search-bar {
+    /* height: 90vh; */
   }
 }
 .big-search-bar {
   /* background-image: url(../Futsal_images/homepage.jpg); */
-  height: 1000px;
+  height: 75vh;
+  width: 90vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
   justify-content: space-between;
   flex-direction: row;
 }
-
-
-
 .search-input {
   color: var(--accent-color);
 }

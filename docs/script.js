@@ -19,3 +19,18 @@
       }
    })
 })();
+
+
+// (() => {
+//     GoogleMaps API
+//    var input = document.getElementById('searchInput');
+//    var options = {
+//       types: ['geocode'],
+//       componentRestrictions: { country: 'np' },
+//       bounds: new google.maps.LatLngBounds(
+//          new google.maps.LatLng(27.6038, 85.3037), // Kathmandu southwest corner
+//          new google.maps.LatLng(27.7489, 85.4622)  // Kathmandu northeast corner
+//       )
+//    };
+//    var autocomplete = new google.maps.places.Autocomplete(input, options);
+// })();
