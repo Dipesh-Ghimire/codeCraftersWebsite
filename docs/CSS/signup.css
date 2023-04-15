@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* defining css variables */
+  --primary-text-color: #ffffff;
+  --primary-font-weight: 700;
+  /* --dark-color-diff:#232323; */
+  --dark-color-diff: #454545;
+  --navbar-color: #1d1d1f;
+  --bg-color: #181818;
+  --accent-color: #22ed4e;
+  --accent-color-dark: #24a31d;
+  --padding-inline-section: 20px;
+}
+
+.form-container {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 90%;
+  height: 95vh;
+  display: flex;
+  margin: 2.5vh auto;
+  border: 1px solid var(--dark-color-diff);
+
+  border-radius: 30px;
+}
+
+.form-container .image-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.form-container .image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #780206; */
+  background: -webkit-linear-gradient(to right, #061161, #780206);
+  background: linear-gradient(to right, #061161, #780206);
+
+  z-index: 1;
+  mix-blend-mode: screen;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.form-container .image-box .left-signing-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* form-content-box */
+
+.form-container .form-content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.form-container .form-content-box .form-box {
+  width: 70%;
+}
+.form-container .form-content-box .form-box h2 {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid var(--accent-color-dark);
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.form-container .form-content-box .form-box .input-box {
+  margin-bottom: 20px;
+}
+.form-container .form-content-box .form-box .input-box .label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: var(--dark-color-diff);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.form-container .form-content-box .form-box .input-box input {
+  width: 100%;
+
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid var(--accent-color);
+  letter-spacing: 1px;
+  color: var(--accent-color-dark);
+
+  background: transparent;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.form-container .form-content-box .form-box .input-box input[type="submit"] {
+  background: var(--accent-color);
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-container
+  .form-content-box
+  .form-box
+  .input-box
+  input[type="submit"]:hover {
+  background-color: var(--accent-color-dark);
+  box-shadow: 0 0 10px var(--secondary-text-color);
+}
+
+.form-container .form-content-box .remember {
+  margin-bottom: 10px;
+  color: var(--dark-color-diff);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.form-container .form-content-box .form-box .input-box p {
+  color: var(--dark-color-diff);
+}
+.form-container .form-content-box .form-box .input-box p a {
+  color: var(--accent-color-dark);
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
+    height: 100vh;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .form-container .image-box::before {
+    border-radius: 30px;
+  }
+
+  .form-container .image-box .left-signing-image {
+    border-radius: 30px;
+    /* height: auto; */
+  }
+  .form-container .image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .form-container .form-content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .form-container .form-content-box .form-box {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    background: var(--primary-text-color);
+    margin: 20px;
+    border-radius: 3px;
+  }
+}
+
+.form-container .form-content-box .form-box:first-child {
+  padding-top: 10px;
+}
+
+.form-container .form-content-box .form-box:last-child {
+  padding-bottom: 10px;
+}
