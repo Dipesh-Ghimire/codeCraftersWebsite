@@ -1,0 +1,42 @@
+:root {
+    /* defining css variables */
+    --primary-text-color: #ffffff;
+    --primary-font-weight: 700;
+    /* --dark-color-diff:#232323; */
+    --dark-color-diff: #454545;
+    --navbar-color: #1d1d1f;
+    --bg-color: #181818;
+    --accent-color: #22ed4e;
+    --accent-color-dark: #24a31d;
+    --padding-inline-section: 20px;
+  }
+h1{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.first{
+    display: flex;
+    text-align: justify;
+
+}
+.first img{
+    width: 45%;
+}
+.aboutus{
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    text-underline-offset: 1rem;
+}
+/* hr{
+    width: 20%;
+    margin-left: 454px;
+    margin-bottom: 10px;
+    
+} */
+.first p{
+    margin-inline: 20px;
+}
+.first p a{
+    color: var(--accent-color);
+}
