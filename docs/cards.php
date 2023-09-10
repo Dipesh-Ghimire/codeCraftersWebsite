@@ -9,7 +9,7 @@
       <div class="card-grid">
         <div class="card card-shadow">
           <div class="card-header card-image">
-            <img src="../Futsal_images/play.jpg" alt="IMG" />
+            <img src="./Futsal_images/play.jpg" alt="IMG" />
           </div>
 
           <div class="card-body">
@@ -35,7 +35,7 @@
         </div>
         <div class="card card-shadow">
           <div class="card-header card-image">
-            <img src="../Futsal_images/futsalpic.jpg" alt="IMG" />
+            <img src="./Futsal_images/futsalpic.jpg" alt="IMG" />
           </div>
 
           <div class="card-body">
@@ -62,7 +62,7 @@
         <div class="card card-shadow">
           <div class="card-header card-image">
             <img
-              src="../Futsal_images/marsha-dhita-MTJg6XhoJCQ-unsplash.jpg"
+              src="./Futsal_images/marsha-dhita-MTJg6XhoJCQ-unsplash.jpg"
               alt="IMG"
             />
           </div>
@@ -90,7 +90,7 @@
         </div>
         <div class="card card-shadow">
           <div class="card-header card-image">
-            <img src="../Futsal_images/homepage.jpg" alt="IMG" />
+            <img src="./Futsal_images/homepage.jpg" alt="IMG" />
           </div>
 
           <div class="card-body">
@@ -116,7 +116,7 @@
         </div>
         <div class="card card-shadow">
           <div class="card-header card-image">
-            <img src="../Futsal_images/night.jpg" alt="IMG" />
+            <img src="./Futsal_images/night.jpg" alt="IMG" />
           </div>
 
           <div class="card-body">
@@ -142,7 +142,7 @@
         </div>
         <div class="card card-shadow">
           <div class="card-header card-image">
-            <img src="../Futsal_images/field.jpg" alt="IMG" />
+            <img src="./Futsal_images/field.jpg" alt="IMG" />
           </div>
 
           <div class="card-body">

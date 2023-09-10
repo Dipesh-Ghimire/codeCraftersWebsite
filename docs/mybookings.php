@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bookings</title>
-    <link rel="stylesheet" href="../CSS/cards.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/media.queries.navbar.css" />
-    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="./CSS/cards.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/media.queries.navbar.css" />
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <?php include "./navbar.php"?>

@@ -8,10 +8,10 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Futsal Nepal-Online Futsal Booking</title>
-    <link rel="stylesheet" href="../CSS/cards.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/media.queries.navbar.css" />
-    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="./CSS/cards.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/media.queries.navbar.css" />
+    <script defer src="./script.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd4BaTvvC-tqaaTh-fw6HF_CJvvvlUbyo&libraries=places"></script> -->
   </head>
   <body>

@@ -13,7 +13,7 @@
           <div id="logo">
             <a href="./index.php">
               <img
-                src="../Futsal_images/logo_main2.png"
+                src="./Futsal_images/logo_main2.png"
                 alt="Futsal Nepal Logo"
               />
             </a>

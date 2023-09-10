@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="../CSS/cards.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/media.queries.navbar.css" />
-    <link rel="stylesheet" href="../CSS/aboutus.css" />
-    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="./CSS/cards.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/media.queries.navbar.css" />
+    <link rel="stylesheet" href="./CSS/aboutus.css" />
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <?php include "./navbar.php"?>
@@ -33,14 +33,14 @@
         the rest. <a href="signup.php">Join us</a> and discover the best of
         futsal.
       </p>
-      <img src="../Futsal_images/Form Images/formimg1.jpg" />
+      <img src="./Futsal_images/Form Images/formimg1.jpg" />
     </div>
     <!-- Footer -->
     <footer>
       <div class="row">
         <div class="col">
           <img
-            src="../Futsal_images/logo_main2.png"
+            src="./Futsal_images/logo_main2.png"
             class="logo-class"
             alt="LOGO"
           />
