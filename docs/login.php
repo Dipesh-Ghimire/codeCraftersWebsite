@@ -26,7 +26,7 @@
         <div class="form-content-box">
             <div class="form-box">
                 <h2>Login</h2>
-                <form action="get">
+                <form action="get" id="form-main" >
                     <!-- <div class="input-box">
                             <label class="label" for="name">Name</label>
                             <input type="text" name="Name" id="name">
@@ -54,7 +54,11 @@
         </div>
     </section>
     <!-- End of Login -->
-
+    <?php include "./footer.php"?>
+    <script
+      src="https://kit.fontawesome.com/5bab80a2b0.js"
+      crossorigin="anonymous"
+    ></script>
 </body>
 
 </html>

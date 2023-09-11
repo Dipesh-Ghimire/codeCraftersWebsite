@@ -144,7 +144,9 @@
 .form-container .form-content-box .form-box .input-box p a {
   color: var(--accent-color-dark);
 }
-
+#form-main{
+  display: block;
+}
 /* Media Query */
 
 @media (max-width: 768px) {

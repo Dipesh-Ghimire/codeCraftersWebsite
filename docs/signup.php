@@ -26,7 +26,7 @@
         <div class="form-content-box">
             <div class="form-box">
                 <h2>Sign Up</h2>
-                <form action="get">
+                <form action="get" id="form-main">
                     <!-- <div class="input-box">
                             <label class="label" for="name">Name</label>
                             <input type="text" name="Name" id="name">
