@@ -1,3 +1,25 @@
+<?php 
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        include "./loginsystem/subsystem/_dbconnect.php";
+        $showAlert= false;
+        $showError = "";
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $password = $_POST["password"];
+        $cpassword = $_POST["cpassword"];
+        $exists = false;
+        if(($password==$cpassword)&& ($exists==false)){
+            $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$password', current_timestamp());";
+            $result = mysqli_query($conn,$sql);
+            if($result){
+                $showAlert = true;
+            }
+        }else{
+            $showError = "Password do not match!";
+        }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,14 +42,25 @@
     <?php include "./navbar.php"?>
     <h1>Signup Section</h1>
     <!-- Signup Normal Form  -->
+    <?php
+    if($showError){
+            session_start();
+            $_SESSION['msg']=$showError;
+            include "./alert.php";
+        }elseif($showAlert){
+            session_start();
+            $_SESSION['msg']="Account Created Successfully!";
+            include "./alert.php";
+            }
+    ?>
     <section class="form-container">
         <div class="image-box">
-            <img src="./Futsal_images/Form Images/formimg3.jpg" alt="form-image`" class="left-signing-image">
+            <img src="./Futsal_images/Form Images/formimg3.jpg" alt="form-image'" class="left-signing-image">
         </div>
         <div class="form-content-box">
             <div class="form-box">
                 <h2>Sign Up</h2>
-                <form action="get" id="form-main">
+                <form action="./signup.php" method="POST" id="form-main">
                     <!-- <div class="input-box">
                             <label class="label" for="name">Name</label>
                             <input type="text" name="Name" id="name">
@@ -38,20 +71,20 @@
                     </div>
                     <div class="input-box">
                         <label class="label" for="email">Email</label>
-                        <input type="email" name="Email" id="email" required placeholder="name@email.com">
+                        <input type="email" name="email" id="email" required placeholder="name@email.com">
                     </div>
                     <div class="input-box">
                         <label class="label" for="phoneno">Phone</label>
-                        <input type="text-number" name="phoneno" id="phoneno" required value="+977- "
+                        <input type="text" name="phone" id="phone" required value="+977-"
                             placeholder="+977- _ _ _ _ _ _ _ _ _ _">
                     </div>
                     <div class="input-box">
                         <label class="label" for="password" aria-required="true">Password</label>
-                        <input type="password" name="Password" id="password" placeholder="-------">
+                        <input type="password" name="password" id="password" placeholder="-------">
                     </div>
                     <div class="input-box">
                         <label class="label" for="check-password" aria-required="true">Re-enter your Password</label>
-                        <input type="password" name="Password" id="check-password" placeholder="-------">
+                        <input type="password" name="cpassword" id="check-password" placeholder="-------">
                     </div>
 
                     <div class="remember">

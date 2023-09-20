@@ -19,7 +19,7 @@
 
 .form-container {
   font-family: "Poppins", sans-serif;
-  position: relative;
+  /* position: relative; */
   width: 90%;
   height: 95vh;
   display: flex;

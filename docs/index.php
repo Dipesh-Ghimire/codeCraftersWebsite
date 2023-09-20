@@ -1,3 +1,11 @@
+<?php 
+session_start();
+// either loggedin is not set or loggedin is not true
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+  header("location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +27,7 @@
 
   <!-- Big-Search-Bar Section -->
   <section class="bsb-section container">
-    <div class="big-search-bar flex"></div>
+    <div class="big-search-bar flex"><?php echo $_SESSION['username'];?></div>
   </section>
 
   <?php include "./cards.php" ?>
