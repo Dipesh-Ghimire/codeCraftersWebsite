@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./CSS/login.css">
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/media.queries.navbar.css" />
+    <script defer src="./script.js"></script>
 </head>
 
 <body>

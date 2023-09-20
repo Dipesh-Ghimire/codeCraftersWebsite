@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./CSS/signup.css">
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/media.queries.navbar.css" />
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
@@ -66,6 +67,11 @@
             </div>
         </div>
     </section>
+    <?php include "./footer.php"?>
+    <script
+      src="https://kit.fontawesome.com/5bab80a2b0.js"
+      crossorigin="anonymous"
+    ></script>
 </body>
 
 </html>
