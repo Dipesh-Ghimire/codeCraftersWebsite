@@ -18,7 +18,8 @@
 
         if($exist == false){
             if(($password==$cpassword)){
-                $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$password', current_timestamp());";
+                $hash = password_hash($password,PASSWORD_DEFAULT);
+                $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$hash', current_timestamp());";
                 $result = mysqli_query($conn,$sql);
                 if($result){
                     $showAlert = true;

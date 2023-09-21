@@ -1,26 +1,32 @@
-<?php 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $login = false;
-        $showError = "";
-        include "./loginsystem/subsystem/_dbconnect.php";
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $sql = "SELECT * FROM users_table WHERE email='$email' AND password='$password'";
-        $result = mysqli_query($conn,$sql);
-        $num = mysqli_num_rows($result);
-        if($num==1){
-            $row = $result->fetch_assoc();
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $login = false;
+    $showError = "";
+    include "./loginsystem/subsystem/_dbconnect.php";
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $sql = "SELECT * FROM users_table WHERE email='$email'";
+    // $sql = "SELECT * FROM users_table WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result);
+    if ($num == 1) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
             $login = true;
             session_start();
-            $_SESSION['loggedin']=true;
-            $_SESSION['email']=$email;
-            $_SESSION['username']=strstr($row["name"], ' ', true);
+            $_SESSION['loggedin'] = true;
+            $_SESSION['email'] = $email;
+            $_SESSION['username'] = strstr($row["name"], ' ', true);
             // redirect to home page
             header("location: index.php");
-        }else{
+        }else {
             $showError = "Invalid Credentials";
         }
+
+    } else {
+        $showError = "Invalid Credentials";
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,19 +48,19 @@
 </head>
 
 <body>
-    <?php include "./navbar.php"?>
+    <?php include "./navbar.php" ?>
     <?php
-    if($showError){
-            session_start();
-            $_SESSION['msg']=$showError;
-            include "./alert.php";
-        }elseif($login){
-            session_start();
-            $_SESSION['msg']="Logged In Successfully!";
-            include "./alert.php";
-            }
+    if ($showError) {
+        session_start();
+        $_SESSION['msg'] = $showError;
+        include "./alert.php";
+    } elseif ($login) {
+        session_start();
+        $_SESSION['msg'] = "Logged In Successfully!";
+        include "./alert.php";
+    }
     ?>
-    <h1 style="display: flex; justify-content:center;" >Login Section</h1>
+    <h1 style="display: flex; justify-content:center;">Login Section</h1>
     <!-- Login Normal Form  -->
     <section class="form-container">
         <div class="image-box">
@@ -63,7 +69,7 @@
         <div class="form-content-box">
             <div class="form-box">
                 <h2>Login</h2>
-                <form action="./login.php" method="POST" id="form-main" >
+                <form action="./login.php" method="POST" id="form-main">
                     <!-- <div class="input-box">
                             <label class="label" for="name">Name</label>
                             <input type="text" name="Name" id="name">
@@ -91,11 +97,8 @@
         </div>
     </section>
     <!-- End of Login -->
-    <?php include "./footer.php"?>
-    <script
-      src="https://kit.fontawesome.com/5bab80a2b0.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include "./footer.php" ?>
+    <script src="https://kit.fontawesome.com/5bab80a2b0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
