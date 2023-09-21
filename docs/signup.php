@@ -8,15 +8,26 @@
         $phone = $_POST["phone"];
         $password = $_POST["password"];
         $cpassword = $_POST["cpassword"];
-        $exists = false;
-        if(($password==$cpassword)&& ($exists==false)){
-            $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$password', current_timestamp());";
-            $result = mysqli_query($conn,$sql);
-            if($result){
-                $showAlert = true;
+
+        // to check if email or phone already exist
+        $exist_sql = "SELECT * FROM users_table WHERE email = '$email' OR phone  = '$phone';";
+        $exist_result = mysqli_query($conn,$exist_sql);
+        $exist_row = mysqli_num_rows($exist_result);
+        ($exist_row>0)?$exist=true:$exist = false;
+        // if rows exist, exist is true and email not accepted
+
+        if($exist == false){
+            if(($password==$cpassword)){
+                $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$password', current_timestamp());";
+                $result = mysqli_query($conn,$sql);
+                if($result){
+                    $showAlert = true;
+                }
+            }else{
+                $showError = "Password do not match!";
             }
         }else{
-            $showError = "Password do not match!";
+            $showError = "Email or Phone already Registered!";
         }
     }
     ?>

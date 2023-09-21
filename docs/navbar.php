@@ -1,3 +1,10 @@
+<?php 
+session_start();
+$login = false;
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+  $login = true;
+}
+?>
 <!-- Top Banner -->
 <div class="top-banner">
       <div class="container">
@@ -53,15 +60,20 @@
                 <a class="nl hover-link" href="./contact.php">Contact</a>
               </div>
               <div>
-                <a class="nl hover-link secondary-button" href="./login.php"
-                  >Login</a
+                <a class="nl hover-link secondary-button" href="<?php if(!$login){echo './login.php';}else{echo './logout.php';}?>"
+                  ><?php if($login){echo "Logout";}else{echo "Login";}?></a
                 >
               </div>
-              <div>
+              <?php 
+              if(!$login) { echo '<div>
                 <a class="nl hover-link primary-button" href="./signup.php"
                   >SignUp</a
                 >
-              </div>
+              </div>';}?>
+              <?php 
+              if($login) { 
+                echo "<div><a class='nl hover-link primary-button' href='./profile.php'>".$_SESSION['username']."!</a></div>";
+                  }?>
             </div>
             <div id="toggle-button">
               <i class="fa-solid fa-bars fa-2xl"></i>

@@ -14,7 +14,7 @@
             session_start();
             $_SESSION['loggedin']=true;
             $_SESSION['email']=$email;
-            $_SESSION['username']=$row["name"];
+            $_SESSION['username']=strstr($row["name"], ' ', true);
             // redirect to home page
             header("location: index.php");
         }else{
@@ -54,7 +54,7 @@
             include "./alert.php";
             }
     ?>
-    <h1>Login Section</h1>
+    <h1 style="display: flex; justify-content:center;" >Login Section</h1>
     <!-- Login Normal Form  -->
     <section class="form-container">
         <div class="image-box">
