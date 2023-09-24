@@ -78,7 +78,7 @@ $loginUrl = $helper->getLoginUrl('http://localhost/mysite/codeCraftersWebsite/do
         <div class="form-content-box">
             <div class="form-box">
                 <h2>Sign Up</h2>
-                <form action="./signup.php" method="POST" id="form-main">
+                <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST" id="form-main">
                     <!-- <div class="input-box">
                             <label class="label" for="name">Name</label>
                             <input type="text" name="Name" id="name">
