@@ -1,37 +1,39 @@
-<?php 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
-        include "./loginsystem/subsystem/_dbconnect.php";
-        $showAlert= false;
-        $showError = "";
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $password = $_POST["password"];
-        $cpassword = $_POST["cpassword"];
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include "./loginsystem/subsystem/_dbconnect.php";
+    $showAlert = false;
+    $showError = "";
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $password = $_POST["password"];
+    $cpassword = $_POST["cpassword"];
 
-        // to check if email or phone already exist
-        $exist_sql = "SELECT * FROM users_table WHERE email = '$email' OR phone  = '$phone';";
-        $exist_result = mysqli_query($conn,$exist_sql);
-        $exist_row = mysqli_num_rows($exist_result);
-        ($exist_row>0)?$exist=true:$exist = false;
-        // if rows exist, exist is true and email not accepted
+    // to check if email or phone already exist
+    $exist_sql = "SELECT * FROM users_table WHERE email = '$email' OR phone  = '$phone';";
+    $exist_result = mysqli_query($conn, $exist_sql);
+    $exist_row = mysqli_num_rows($exist_result);
+    ($exist_row > 0) ? $exist = true : $exist = false;
+    // if rows exist, exist is true and email not accepted
 
-        if($exist == false){
-            if(($password==$cpassword)){
-                $hash = password_hash($password,PASSWORD_DEFAULT);
-                $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$hash', current_timestamp());";
-                $result = mysqli_query($conn,$sql);
-                if($result){
-                    $showAlert = true;
-                }
-            }else{
-                $showError = "Password do not match!";
+    if ($exist == false) {
+        if (($password == $cpassword)) {
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO `users_table` (`user_id`, `name`, `email`, `phone`, `password`, `date`) VALUES (NULL, '$name', '$email', '$phone', '$hash', current_timestamp());";
+            $result = mysqli_query($conn, $sql);
+            if ($result) {
+                $showAlert = true;
             }
-        }else{
-            $showError = "Email or Phone already Registered!";
+        } else {
+            $showError = "Password do not match!";
         }
+    } else {
+        $showError = "Email or Phone already Registered!";
     }
-    ?>
+}
+include "fbsignin.php";
+$loginUrl = $helper->getLoginUrl('http://localhost/mysite/codeCraftersWebsite/docs/fbsignin.php', $permissions);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,19 +53,23 @@
 </head>
 
 <body>
-    <?php include "./navbar.php"?>
+    <?php include "./navbar.php" ?>
     <h1 style="display:flex;justify-content:center;">Signup Section</h1>
     <!-- Signup Normal Form  -->
     <?php
-    if($showError){
-            if (!isset($_SESSION)) {session_start();}
-            $_SESSION['msg']=$showError;
-            include "./alert.php";
-        }elseif($showAlert){
-            if (!isset($_SESSION)) {session_start();}
-            $_SESSION['msg']="Account Created Successfully!";
-            include "./alert.php";
-            }
+    if ($showError) {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $_SESSION['msg'] = $showError;
+        include "./alert.php";
+    } elseif ($showAlert) {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $_SESSION['msg'] = "Account Created Successfully!";
+        include "./alert.php";
+    }
     ?>
     <section class="form-container">
         <div class="image-box">
@@ -106,7 +112,7 @@
                         <input type="submit" value="Create New Account">
                     </div>
                     <div class="input-box">
-                        <a href="#" class="facebook-button">Sign in with Facebook</a>
+                        <a href="<?php echo $loginUrl;?>" class="facebook-button">Sign in with Facebook</a>
                     </div>
                     <div class="input-box">
                         <a href="#" class="google-button">Sign in with Google</a>
@@ -118,11 +124,8 @@
             </div>
         </div>
     </section>
-    <?php include "./footer.php"?>
-    <script
-      src="https://kit.fontawesome.com/5bab80a2b0.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include "./footer.php" ?>
+    <script src="https://kit.fontawesome.com/5bab80a2b0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

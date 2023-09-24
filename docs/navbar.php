@@ -72,7 +72,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
               </div>';}?>
               <?php 
               if($login) { 
-                echo "<div><a class='nl hover-link primary-button' href='./profile.php'>".$_SESSION['FULLNAME']."!</a></div>";
+                echo "<div><a class='nl hover-link primary-button' href='./profile.php'>".strstr($_SESSION['FULLNAME'], ' ', true)."!</a></div>";
                   }?>
             </div>
             <div id="toggle-button">

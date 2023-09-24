@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (!isset($_SESSION)) {session_start();}
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
-            $_SESSION['username'] = strstr($row["name"], ' ', true);
+            $_SESSION['FULLNAME'] = $row["name"];
             // redirect to home page
             header("location: index.php");
         }else {
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="input-box">
                         <label class="label" for="password" aria-required="true">Password</label>
-                        <input type="password" name="password" id="password" placeholder="-------">
+                        <input type="password" name="password" id="password" placeholder="-------" required>
                     </div>
 
                     <div class="remember">
