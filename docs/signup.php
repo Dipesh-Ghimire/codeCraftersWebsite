@@ -106,6 +106,12 @@
                         <input type="submit" value="Create New Account">
                     </div>
                     <div class="input-box">
+                        <a href="#" class="facebook-button">Sign in with Facebook</a>
+                    </div>
+                    <div class="input-box">
+                        <a href="#" class="google-button">Sign in with Google</a>
+                    </div>
+                    <div class="input-box">
                         <p>Already have an account? <a href="login.html">Login</a></p>
                     </div>
                 </form>

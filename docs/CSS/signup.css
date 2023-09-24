@@ -146,6 +146,45 @@
 #form-main{
   display: block;
 }
+.facebook-button {
+  background-color: #1877F2; /* Facebook blue */
+  color: #fff; /* White text */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.facebook-button:hover {
+  background-color: #0e5a95; /* Darker blue on hover */
+}
+
+/* Style the Google button */
+.google-button {
+  background-color: #8B4513; /* Brown color */
+  color: #fff; /* White text */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-button:hover {
+  background-color: #654321; /* Darker brown on hover */
+}
+
 /* Media Query */
 
 @media (max-width: 768px) {
