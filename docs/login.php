@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
             $login = true;
-            session_start();
+            if (!isset($_SESSION)) {session_start();}
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
             $_SESSION['username'] = strstr($row["name"], ' ', true);
@@ -51,11 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include "./navbar.php" ?>
     <?php
     if ($showError) {
-        session_start();
+        if (!isset($_SESSION)) {session_start();}
         $_SESSION['msg'] = $showError;
         include "./alert.php";
     } elseif ($login) {
-        session_start();
+        if (!isset($_SESSION)) {session_start();}
         $_SESSION['msg'] = "Logged In Successfully!";
         include "./alert.php";
     }

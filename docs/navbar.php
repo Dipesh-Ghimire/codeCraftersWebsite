@@ -1,5 +1,5 @@
 <?php 
-session_start();
+if (!isset($_SESSION)) {session_start();}
 $login = false;
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
   $login = true;
@@ -72,7 +72,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
               </div>';}?>
               <?php 
               if($login) { 
-                echo "<div><a class='nl hover-link primary-button' href='./profile.php'>".$_SESSION['username']."!</a></div>";
+                echo "<div><a class='nl hover-link primary-button' href='./profile.php'>".$_SESSION['FULLNAME']."!</a></div>";
                   }?>
             </div>
             <div id="toggle-button">

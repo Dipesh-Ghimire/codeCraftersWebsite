@@ -52,15 +52,15 @@
 
 <body>
     <?php include "./navbar.php"?>
-    <h1>Signup Section</h1>
+    <h1 style="display:flex;justify-content:center;">Signup Section</h1>
     <!-- Signup Normal Form  -->
     <?php
     if($showError){
-            session_start();
+            if (!isset($_SESSION)) {session_start();}
             $_SESSION['msg']=$showError;
             include "./alert.php";
         }elseif($showAlert){
-            session_start();
+            if (!isset($_SESSION)) {session_start();}
             $_SESSION['msg']="Account Created Successfully!";
             include "./alert.php";
             }
@@ -103,7 +103,7 @@
                         <label class="label" for=""><input type="checkbox" value="remember-me">Remember Me</label>
                     </div>
                     <div class="input-box">
-                        <input type="submit" value="Sign In">
+                        <input type="submit" value="Create New Account">
                     </div>
                     <div class="input-box">
                         <p>Already have an account? <a href="login.html">Login</a></p>
