@@ -29,7 +29,7 @@
 
           <div class="card-body">
             <div class="body-header flex">
-              <a class="c-white" href="#"
+              <a class="c-white" href="futsal_profile.php?id=<?=$row['futsal_id']?>"
                 ><h3 class="futsal-name"><?php echo $row['futsal_name'];?></h3></a
               >
               <div><span class="tertiary-button">Rs.<?php echo $row['price_per_hour'];?>/-</span></div>
